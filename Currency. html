@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Currency Converter</title>
+<style>
+body { font-family: Arial; text-align: center; padding: 50px; background: #f4f4f4; }
+.box { background: white; padding: 30px; border-radius: 10px; width: 300px; margin: auto; }
+input, button { padding: 10px; margin: 10px; width: 80%; }
+button { background: #007bff; color: white; border: none; border-radius: 5px; }
+</style>
+</head>
+<body>
+<div class="box">
+<h2>USD to PKR Converter</h2>
+<input type="number" id="usd" placeholder="Enter USD">
+<button onclick="convert()">Convert</button>
+<h3 id="result"></h3>
+</div>
+
+<script>
+function convert() {
+    let usd = document.getElementById("usd").value;
+    let pkr = usd * 280; // 1 USD = 280 PKR
+    document.getElementById("result").innerHTML = usd + " USD = " + pkr + " PKR";
+}
+</script>
+</body>
+</html>
