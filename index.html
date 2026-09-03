@@ -1,70 +1,133 @@
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamir Nazeer - Portfolio</title>
-    <style>
-        body { font-family: Arial; margin: 0; background: #f4f4f4; color: #333; }
-        header { background: #007bff; color: white; padding: 40px 20px; text-align: center; }
-        header img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; object-fit: cover; }
-        header h1 { margin: 10px 0 0 0; font-size: 35px; }
-        header p { margin: 5px 0 0 0; }
-        .container { max-width: 900px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; }
-        .btn { background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; }
-        .project { background: #e9ecef; padding: 15px; margin: 10px 0; border-left: 4px solid #007bff; border-radius: 5px; }
-        footer { text-align: center; padding: 20px; background: #333; color: white; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aamir Nazeer - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    
+    body { background: #f5f7fa; color: #333; line-height: 1.6; }
+
+    /* Header */
+    header { 
+      background: linear-gradient(135deg, #0077ff, #0056b3); 
+      color: white; text-align: center; padding: 40px 20px; 
+      position: sticky; top: 0; z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid white; }
+    header h1 { margin-top: 10px; font-size: 28px; }
+    header p { font-size: 14px; opacity: 0.9; }
+
+    /* Container */
+    .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+    h2 { color: #0077ff; margin-bottom: 20px; font-size: 24px; }
+
+    /* Cards */
+    .card {
+      background: white; padding: 20px; margin-bottom: 20px;
+      border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    /* Buttons */
+    .btn {
+      display: inline-block; background: #0077ff; color: white;
+      padding: 10px 18px; border-radius: 8px; text-decoration: none;
+      margin-top: 10px; transition: 0.3s;
+    }
+    .btn:hover { background: #0056b3; transform: scale(1.05); }
+
+    /* Skills Progress Bar */
+    .skill { margin-bottom: 15px; }
+    .skill-bar { background: #ddd; border-radius: 10px; height: 10px; }
+    .skill-fill { background: #0077ff; height: 10px; border-radius: 10px; }
+
+    /* Footer */
+    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 22px; }
+      .container { padding: 0 15px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="1000154063-removebg-preview.jpg" alt="Amir Photo">
-    <h1>Aamir Nazeer </h1>
-    <p>Web Developer | Karachi, PK</p>
-</header>
+  <header>
+    <img src="1000154063-removebg-preview.jpg" alt="Aamir Nazeer">
+    <h1>Aamir Nazeer</h1>
+    <p>Web Developer | Karachi, Pakistan</p>
+  </header>
 
-<div class="container">
-    <h2>About Me</h2>
-    <p>Hello! I'm Aamir Nazeer. I'm a passionate Web Developer from Karachi, Pakistan. I'm currently learning web development and this is my very first live website. I'm excited to grow my skills and build more projects in the future!</p>
+  <div class="container">
     
-    <a href="mailto:aamirnazeerr2024@gmail.com" class="btn">Contact Me</a>
-</div>
+    <section>
+      <h2>About Me</h2>
+      <div class="card">
+        <p>I'm Aamir Nazeer, a passionate Web Developer from Karachi, Pakistan. 
+        I build responsive websites using HTML, CSS, and JavaScript. 
+        Currently learning and working on real-world projects to improve my skills.</p>
+        <a href="mailto:aamirnazeerr2024@gmail.com" class="btn">Contact Me</a>
+      </div>
+    </section>
 
-<div class="container">
-    <h2>My Projects</h2>
-    <div class="project">
-    <h3>Project 1: Currency Converter</h3>
-    <p>Converts USD to PKR</p>
-    <a href="currency.html" class="btn">View Project</a>
+    <section>
+      <h2>My Projects</h2>
+      <div class="card">
+        <h3>Project 1: Currency Converter</h3>
+        <p>Converts USD to PKR with live exchange rate.</p>
+        <p><b>Tech:</b> HTML, CSS, JavaScript</p>
+        <a href="currency.html" class="btn">View Project</a>
+        <a href="#" class="btn">View Code</a>
+      </div>
+
+      <div class="card">
+        <h3>Project 2: To-Do List App</h3>
+        <p>Add, delete and manage your daily tasks easily.</p>
+        <p><b>Tech:</b> HTML, CSS, JavaScript</p>
+        <a href="todo.html" class="btn">View Project</a>
+        <a href="#" class="btn">View Code</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>My Skills</h2>
+      <div class="card">
+        <div class="skill">
+          <p>HTML</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
         </div>
-        <div class="project">
-            <h3>Project 2: To-Do List App</h3>
-            <p>Daily tasks add aur delete karne wali app - HTML, CSS, JavaScript</p>
-            <a href="todo.html" class="btn">View Project</a>
+        <div class="skill">
+          <p>CSS</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
         </div>
-</div>
-    <div class="container">
-    <h2>My Skills</h2>
-    <p>HTML, CSS, Web Development</p>
-</div>
-    <div class="project">
-        <h3>Project 1: Portfolio Website</h3>
-        <p></p></p>
-    </div>
-</div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+        </div>
+      </div>
+    </section>
 
-<div class="container">
-    <h2>Contact</h2>
-    <p>Email: <b>aamirnazeerr2024@gmail.com</b></p>
-</div>
+    <section>
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: aamirnazeerr2024@gmail.com</p>
+        <p>Location: Karachi, Pakistan</p>
+      </div>
+    </section>
 
-<footer>
-    <p>Made  by Aamir Nazeer | 2026</p>
-</footer>
+  </div>
+
+  <footer>
+    <p>© 2026 Aamir Nazeer. All Rights Reserved</p>
+  </footer>
 
 </body>
-</html>
-
-        
+</html>       
